@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   <link rel="stylesheet" href="bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+   <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+   <script src="main3.js" charset="utf-8"></script>
+   <style media="screen">
+      .form-control{
+      border: none;
+      border-radius: 0px;
+      border-bottom: 2px solid #f5f5f5;
+      margin-bottom: 0.6rem;
+      }
+      h1{
+      font-family: 'Bebas Neue';
+      }
+      .desc{
+      font-size: 1.2rem;
+      margin-top: -3vh;
+      }
+      input::selection{
+      background-color: none;
+      }
+      input{
+      background-color: none;
+      }
+      .submit{
+      width: 15vw;
+      font-family: 'Bebas Neue';
+      font-size: 1.1rem;
+      color: #2e2e2e;
+      letter-spacing: 0.5px;
+      }
+      .badge{
+      background-color: #ff6347 !important;
+      font-size: 1rem;
+      }
+      .accordion-body{
+        overflow-y: scroll;
+        max-height: 55vh;
+      }
+      .accordion-button,.accordion-button:active,.accordion-button:hover,.accordion-button:focus,.accordion-button:target{
+      font-family: "Caveat";
+      border: none;
+      border-bottom: 2px solid #f3f3f3;
+      }
+      .list-group-item{
+      background-color: white;
+      border: none;
+      border-radius: none;
+      color: #2e2e2e;
+      border-bottom: 2px solid #f3f3f3;
+      }
+      .list-group-item:hover, .list-group-item:active,.list-group-item:focus{
+      background-color: #F0FFFF;
+      border: none;
+      color: #2e2e2e;
+      border-radius: none;
+      border-bottom: 2px solid #f3f3f3;
+      }
+      .img_plan{
+      width: 6vw;
+      height: 6vw;
+      object-fit: cover;
+      border-radius: 75%;
+      }
+      .mb-1{
+      font-family: "Caveat";
+      }
+      .event_list_name{
+      font-size: 1.2rem;
+      }
+      .event_details{
+      margin-top: -5px;
+      }
+      .small{
+      font-size: 1rem;
+      }
+   </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+      <a class="navbar-brand" href="main.html"><b>AlphaTech</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+               <a class="nav-link" href="main.html"><b>Home</b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="main1.html"><b>Video Conference</b></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="main2.html"><b>Text Messaging and File Sharing</b></a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="main3.html"><b>Event Scheduler and Notification</b></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="main4.html"><b>Banner Management</b></a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+   
+   <div class="container-fluid">
+      <div class="row" style="margin-top: 2vh;margin-bottom: 2vh;">
+         <div class="col-1"></div>
+         <div class="col-4" style="padding: 0px; background-color: white;">
+            <div class="accordion" id="accordionExample">
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="container d-flex justify-content-between align-items-center"style="padding: 0; padding-right: 2vw;font-size: 1.3rem;">
+                           <b>Homework</b>
+                           <span class="badge bg-primary rounded-pill">20</span>
+                        </div>
+                     </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                     <div class="accordion-body" style="padding: 0"></div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           <div class="container d-flex justify-content-between align-items-center"style="padding: 0; padding-right: 2vw;font-size: 1.2rem;">
+                              <b>Family Time</b>
+                              <span class="badge bg-primary rounded-pill">20</span>
+                           </div>
+                        </button>
+                     </h2>
+                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="padding: 0"></div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           <div class="container d-flex justify-content-between align-items-center"style="padding: 0; padding-right: 2vw;font-size: 1.2rem;">
+                              <b>Friends</b>
+                              <span class="badge bg-primary rounded-pill">20</span>
+                           </div>
+                        </button>
+                     </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="padding: 0"></div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           <div class="container d-flex justify-content-between align-items-center"style="padding: 0; padding-right: 2vw;font-size: 1.2rem;">
+                              <b>Others</b>
+                              <span class="badge bg-primary rounded-pill">20</span>
+                           </div>
+                        </button>
+                     </h2>
+                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="padding: 0"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-6" style="color: #f5f5f5; padding: 0;">
+            
+            <div class="card justify-content-center align-items-center" style="height: 89vh;">
+               
+               <form class="" action="#" style="padding: 2vw;">
+                  <div class="form-group col">
+                     <button type="button" class="btn-primary" title="Let's check the event which will be held within 3 days" name="announce_button" onclick="announce()" style="padding:10px; float: right; background-color: #d62222 !important;">Check Event</button>
+                  </div>
+                  <h1 style="margin-top: 4vh;">Event Scheduler</h1>
+                  <p class="desc">Enter your event description (Event Name, Type, Date & Time)</p>
+                  <div class="form-group col" style="margin: 0;padding:0">
+                     <label for="e_name">Event Name</label>
+                     <input type="text" name="event_name" class="form-control" required value="Mid Semester Break">
+                  </div>
+                  <div class="form-row">
+                     <div class="col-6">
+                        <label for="e_type">Event Type</label>
+                        <select class="custom-select" id="inputGroupSelect01" name="event_type" required>
+               
+                           <option value="homework" selected>Homework</option>
+                           <option value="family">Family Time</option>
+                           <option value="friend">Friend</option>
+                           <option value="others">Others</option>
+                        </select>
+                     </div>
+                     <div class="col-6">
+                        <label for="venue">Venue</label>
+                        <input type="text" name="event_venue" class="form-control" required value="My Home">
+                     </div>
+                  </div>
+                  <div class="form-row">
+                     <div class="col-6">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" name="event_date" required value="2021-05-09">
+                     </div>
+                     <div class="col-6">
+                        <label for="time">Time</label>
+                        <input type="time" class="form-control" name="event_time" required value="08:00">
+                     </div>
+                  </div>
+                  <div class="d-flex justify-content-between" style="margin-top: 5vh;">
+                     <button type="button" class="submit btn btn-primary" name="button" style="background-color: #FA9905 !important;">Add Event (Vanilla JS)</button>
+                     <button type="button" class="submit btn btn-success" id="JQuery_button" name="button" style="background-color: #FFDF68 !important;">Add Event (Jquery)</button>
+                  </div>
+                 
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

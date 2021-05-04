@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>.masthead {
+        height: 100vh;
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <a class="navbar-brand" href="main.html"><b>AlphaTech</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="main.html"><b>Home</b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="main1.html"><b>Video Conference</b></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="main2.html"><b>Text Messaging and File Sharing</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="main3.html"><b>Event Scheduler and Notification</b></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="main4.html"><b>Banner Management</b></a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      
+   
+      
+    <header class="masthead">
+
+        <select id="imgSelect" class="btn btn-secondary dropdown-toggle" aria-label="Default select example">
+            <option value="https://images.unsplash.com/photo-1528819027803-5473f2bf7633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" selected>Galaxy</option>
+            <option value="https://www.cnet.com/a/img/AXwQBJb1aVW35t86aTpUZFoote8=/940x0/2017/09/20/32a94ec6-03a1-4225-b799-cf2e4f3d127f/cree-floodlight-4.jpg">Light</option>
+            <option value="https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-black-minimalistic-dotted-gradient-texture-banner-background-image_218594.jpg">Dots</option>
+            <option value="http://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/shutterstock_64199689--tojpeg_1409138481893_x1.jpg">Waves</option>
+          </select>
+          
+            <button id="changeButton" class="btn btn-success" style="margin-top: 2px;">change (Js)</button>
+            <button id="changeButtonJq" class="btn btn-success" style="margin-top: 2px;">change (Jq)</button>
+
+            <img id="imgbox"  src="https://images.unsplash.com/photo-1528819027803-5473f2bf7633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt="The_Banner" width="100%" height="50%">
+                <div class="col-12 text-center">
+                    
+                  <h1 id="titlebox" class="font-weight-light">The banner image</h1>
+                  <p id="textbox" class="text-warning">Try change the image using the drop list</p>
+        </div>
+       
+      </header>
+     
+      <script> 
+        var changeBtn = document.getElementById("changeButton");
+       changeBtn.addEventListener("click",function(){
+           var imgtype = document.getElementById("imgSelect").value;
+           document.getElementById("imgbox").src=imgtype;
+       });
+
+       </script>   
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       <script>
+           var changeBtn = $('#changeButtonJq');
+           changeBtn.on('click' , function(){
+         var choosenImage = $('#imgSelect').val();
+         $('#imgbox').attr("src",choosenImage);
+       });
+       </script>
+</body>
+</html>

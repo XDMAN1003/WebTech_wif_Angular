@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!--CSS Library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <title>Text Messaging and File Sharing</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <a class="navbar-brand" href="main.html"><b>AlphaTech</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="main.html"><b>Home</b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="main1.html"><b>Video Conference</b></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="main2.html"><b>Text Messaging and File Sharing</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="main3.html"><b>Event Scheduler and Notification</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="main4.html"><b>Banner Management</b></a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <!--navbar start-->
+
+
+    <div class="row">
+        <!--column 1 (selection of sender and receiver) start-->
+        <div class="col-4" style="border: 2px solid white; border-radius: 10px; margin: 15px; padding: 15px; height: fit-content;">
+            <button id="senderActive" type="button" class="btn btn-primary btn-lg btn-block" style="background-color:blue ;">Sender</button>
+            <button id="receiverActive" type="button" class="btn btn-primary btn-lg btn-block" style="background-color: skyblue;">Receiver</button>
+        </div>
+        <!--column 1 (selection of sender and receiver) end-->
+
+        <!--column 2 (send/receive box) start-->
+        <div class="col-7">
+            <!--sender box-->
+            <div id="senderBox" style="border: 2px solid grey; border-radius: 10px; margin: 15px; padding: 15px; display: block;">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <a class="navbar-brand" href="#" style="text-align: center; width: 100%;">Sender</a>
+                </nav>
+                <textarea id="chatBox" class="form-control" style="background-color: lightgrey; display: block; width: 100%;" rows="15" disabled>
+                    
+                </textarea>
+                <div class="row">
+                    <div class="col-10">
+                        <textarea id="message" class="form-control" style="width: 100%; background-color: white; margin-top: 2px;" rows="3" placeholder="Type text here..."></textarea>
+                    </div>
+                    <div class="col-2">
+                        <button id="sendButton" class="btn btn-success" style="margin-top: 2px;">Send (Js)</button>
+                        <button id="sendButtonJq" class="btn btn-success" style="margin-top: 2px;">Send (Jq)</button>
+                    </div>
+                </div>
+                <label for="exampleInputFile">Send Attachment</label>
+                <input id="attachment" type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            </div>
+            <!--receiver box-->
+            <div id="receiverBox" style="border: 2px solid grey; border-radius: 10px; margin: 15px; padding: 15px; display: none;">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <a class="navbar-brand" href="#" style="text-align: center; width: 100%;">Receiver</a>
+                </nav>
+                <textarea id="chatBox2" class="form-control" style="background-color: lightgrey; display: block; width: 100%;" rows="15" disabled>
+                    
+                </textarea>
+            </div>
+        </div>
+        <!--column 2 (send/receive box) end-->
+    </div>
+
+    <!--Import Javascript & Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="dom2.js"></script>   
+    <!--JS import end-->
+
+</body>
+</html>

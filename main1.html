@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    
+    <title>Video Conference</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <a class="navbar-brand" href="main.html"><b>AlphaTech</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="main.html"><b>Home</b><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="main1.html"><b>Video Conference</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="main2.html"><b>Text Messaging and File Sharing</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="main3.html"><b>Event Scheduler and Notification</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="main4.html"><b>Banner Management</b></a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+          
+            
+          <select id="bgVideoSelect" class="btn btn-secondary dropdown-toggle" aria-label="Default select example">
+            <option value="https://player.vimeo.com/external/354502631.sd.mp4?s=8423d6d48cbf4e1527f848dd494b6a1f95a6fee6&profile_id=164&oauth2_token_id=57447761" selected>Room 01</option>
+            <option value="https://player.vimeo.com/external/460430033.sd.mp4?s=7c46cae822e584dd99740c5f52eee85b3bd3ce10&profile_id=139&oauth2_token_id=57447761">Room 02</option>
+          </select>
+            <button id="changeButton" class="btn btn-success" style="margin-top: 2px;">Switch (Js)</button>
+            <button id="changeButtonJq" class="btn btn-success" style="margin-top: 2px;">Switch (Jq)</button>
+          
+  
+       
+        
+        <div class="embed-responsive embed-responsive-21by9">
+            <video id="bxVideo" class="video-fluid z-depth-1" src="https://player.vimeo.com/external/354502631.sd.mp4?s=8423d6d48cbf4e1527f848dd494b6a1f95a6fee6&profile_id=164&oauth2_token_id=57447761" autoplay>
+            
+            </video>
+        </div>
+        
+         <script> 
+         var changeBtn = document.getElementById("changeButton");
+        changeBtn.addEventListener("click",function(){
+            var vtype = document.getElementById("bgVideoSelect").value;
+            document.getElementById("bxVideo").src = vtype;
+        });
+
+        </script>   
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            var changeBtn = $('#changeButtonJq');
+            changeBtn.on('click' , function(){
+          // 25. Assign your choosen video into a variable
+          var choosenVideo = $('#bgVideoSelect').val();
+          // 26. Replace background video with your choosen video
+          $('#bxVideo').attr("src",choosenVideo);
+        });
+        </script>
+   
+
+    </body>
+</html>
